@@ -22,7 +22,7 @@ Include conf.d/variables/custom.vars
 	AllowEncodedSlashes NoDecode
 	# Add header breadcrumbs for help in troubleshooting
 	<IfModule mod_headers.c>
-		Header add X-Vhost "hostname"
+		Header add X-Vhost "publish"
 	</IfModule>
 
 	<Directory />
@@ -64,5 +64,7 @@ Include conf.d/variables/custom.vars
 		RewriteRule "^(/?)$" "/index.html" [PT]
 
 	</IfModule>
+	Include conf.d/headers/cache-control.conf
+    Include conf.d/headers/header_security.conf
 
 </VirtualHost>
