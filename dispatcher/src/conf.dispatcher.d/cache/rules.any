@@ -1,0 +1,10 @@
+#
+# This file contains the cache rules, and can be customized.
+#
+# By default, it includes the default rules.
+#
+/0090 {
+    /glob "*products.json"
+    /type "allow"
+}
+$include "./default_rules.any"
